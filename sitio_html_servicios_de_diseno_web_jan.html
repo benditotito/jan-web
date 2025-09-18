@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jan Tafall — Creador de Páginas Web | Diseño web moderno y rápido</title>
+  <meta name="description" content="Diseño y creación de páginas web modernas, rápidas y preparadas para vender. Tiendas online, landings y webs corporativas. Pide presupuesto sin compromiso." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Jan Tafall — Creador de Páginas Web" />
+  <meta property="og:description" content="Webs modernas, rápidas y listas para vender. Pide presupuesto hoy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Jan+Tafall+Web+Design" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230ea5e9' width='100' height='100'/><text x='50' y='58' font-size='60' text-anchor='middle' font-family='Arial' fill='white'>J</text></svg>">
+  <style>
+    :root{
+      --bg:#0b0e14;           /* dark bg for sections */
+      --fg:#0f172a;           /* text dark */
+      --muted:#64748b;        /* secondary text */
+      --card:#ffffff;         /* cards */
+      --accent:#0ea5e9;       /* primary (sky blue) */
+      --accent-2:#f59e0b;     /* secondary (amber/gold) */
+      --light:#f8fafc;        /* light bg */
+      --ring: 0 8px 30px rgba(14,165,233,.25);
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--fg);background:#fff;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1120px, 92%);margin-inline:auto}
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:#ffffffcc;backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #e5e7eb}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#38bdf8);display:grid;place-items:center;color:white;font-weight:800}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{padding:10px 12px;border-radius:10px}
+    nav a:hover{background:#f1f5f9}
+    .cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;padding:12px 16px;border-radius:12px;font-weight:600;box-shadow:var(--ring)}
+    .cta.secondary{background:var(--accent-2)}
+    /* Mobile */
+    .menu-btn{display:none}
+    @media (max-width:860px){
+      nav ul{display:none}
+      .menu-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid #e2e8f0;border-radius:12px;padding:10px 12px;background:white}
+      .mobile{display:none;position:absolute;inset:64px 0 auto 0;background:white;border-bottom:1px solid #e5e7eb}
+      .mobile a{display:block;padding:16px 22px;border-top:1px solid #f1f5f9}
+      .mobile.open{display:block}
+    }
+    /* Hero */
+    .hero{padding:64px 0 48px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+    .eyebrow{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:10px}
+    h1{font-size:clamp(32px, 5vw, 54px);line-height:1.05;margin:0 0 14px}
+    .lead{font-size:clamp(16px, 2vw, 20px);color:#334155;margin:0 0 24px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .stat{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;box-shadow:var(--shadow);text-align:center}
+    .stat strong{display:block;font-size:22px}
+    .card-img{border-radius:18px;overflow:hidden;border:1px solid #e5e7eb;box-shadow:var(--shadow)}
+    @media (max-width:860px){.hero-grid{grid-template-columns:1fr}}
+    /* Sections */
+    section{padding:76px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:28px;gap:24px}
+    .section-head h2{font-size:clamp(26px,4vw,36px);margin:0}
+    .muted{color:var(--muted)}
+    /* Services */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:980px){.grid-3{grid-template-columns:1fr 1fr}}
+    @media (max-width:660px){.grid-3{grid-template-columns:1fr}}
+    .service{background:var(--card);border:1px solid #e5e7eb;border-radius:18px;padding:20px;box-shadow:var(--shadow);display:grid;gap:8px}
+    .service .tag{display:inline-block;font-size:12px;background:#f1f5f9;color:#0f172a;padding:6px 10px;border-radius:999px}
+    .service h3{margin:8px 0 6px;font-size:18px}
+    .service p{margin:0;color:#475569}
+    .service .price{margin-top:10px;font-weight:700}
+    .service .btn{justify-self:start;margin-top:8px}
+    /* Portfolio */
+    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:980px){.portfolio{grid-template-columns:1fr 1fr}}
+    @media (max-width:660px){.portfolio{grid-template-columns:1fr}}
+    .work{border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;background:white;box-shadow:var(--shadow)}
+    .work .meta{padding:14px 16px}
+    .work .meta .site{color:#0ea5e9;font-weight:600}
+    /* Proceso */
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    @media (max-width:980px){.steps{grid-template-columns:1fr 1fr}}
+    @media (max-width:660px){.steps{grid-template-columns:1fr}}
+    .step{background:white;border:1px solid #e5e7eb;border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .step strong{display:block;margin-bottom:6px}
+    /* Precios */
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:980px){.pricing{grid-template-columns:1fr 1fr}}
+    @media (max-width:660px){.pricing{grid-template-columns:1fr}}
+    .plan{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:22px;box-shadow:var(--shadow);position:relative}
+    .plan.popular{border-color:var(--accent)}
+    .plan .ribbon{position:absolute;right:14px;top:14px;background:var(--accent);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px}
+    .plan h3{margin:8px 0 6px}
+    .plan .amount{font-size:28px;font-weight:800}
+    .plan ul{margin:10px 0 0;padding-left:18px;color:#475569}
+    /* Testimonios */
+    .testi{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width:860px){.testi{grid-template-columns:1fr}}
+    .quote{background:#0ea5e910;border:1px solid #bae6fd;border-radius:16px;padding:18px}
+    /* FAQ */
+    details{border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;background:white}
+    details+details{margin-top:10px}
+    details summary{cursor:pointer;font-weight:600}
+    /* Contacto */
+    form{display:grid;gap:12px}
+    input, textarea{border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;font:inherit;width:100%}
+    textarea{min-height:120px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:660px){.grid-2{grid-template-columns:1fr}}
+    /* Footer */
+    footer{padding:40px 0;border-top:1px solid #e5e7eb;background:#fafafa;color:#334155}
+    .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
+    @media (max-width:860px){.foot{grid-template-columns:1fr}}
+    .foot a{color:#0ea5e9}
+    .mini{font-size:12px;color:#94a3b8}
+    /* Floating WhatsApp */
+    .wa{position:fixed;right:18px;bottom:18px;background:#22c55e;color:white;padding:14px 16px;border-radius:999px;box-shadow:var(--ring);display:flex;gap:8px;align-items:center;font-weight:700}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Jan Tafall — Creador de Páginas Web",
+    "image": "https://via.placeholder.com/1200x630.png",
+    "url": "https://tu-dominio.com",
+    "areaServed": "España",
+    "description": "Diseño y desarrollo de páginas web modernas, tiendas online y landings.",
+    "sameAs": ["https://instagram.com/benditotitus"],
+    "telephone": "+34 600 000 000",
+    "email": "mailto:jantafall31@gmail.com"
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="logo">J</span>
+        <span>Jan Tafall · Web Design</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#contacto" class="cta">Pedir presupuesto</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" aria-label="Abrir menú" onclick="document.querySelector('.mobile').classList.toggle('open')">☰ Menú</button>
+    </div>
+    <div class="mobile">
+      <a href="#servicios" onclick="this.closest('.mobile').classList.remove('open')">Servicios</a>
+      <a href="#portfolio" onclick="this.closest('.mobile').classList.remove('open')">Portfolio</a>
+      <a href="#precios" onclick="this.closest('.mobile').classList.remove('open')">Precios</a>
+      <a href="#contacto" class="cta" style="margin:12px" onclick="this.closest('.mobile').classList.remove('open')">Pedir presupuesto</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Webs modernas · SEO · Velocidad</span>
+        <h1>Diseño y creo páginas web <span style="background:linear-gradient(90deg,var(--accent),#38bdf8);-webkit-background-clip:text;background-clip:text;color:transparent">rápidas y listas para vender</span></h1>
+        <p class="lead">Convierte visitas en clientes con una web a medida. Trabajo con emprendedores y negocios locales para crear sitios elegantes, funcionales y fáciles de gestionar.</p>
+        <div class="hero-actions">
+          <a class="cta" href="#contacto">Solicitar presupuesto</a>
+          <a class="cta secondary" href="#portfolio">Ver trabajos</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>7 días</strong><span class="muted">Entrega media</span></div>
+          <div class="stat"><strong>+20</strong><span class="muted">Proyectos demo</span></div>
+          <div class="stat"><strong>99%</strong><span class="muted">Clientes satisfechos*</span></div>
+        </div>
+      </div>
+      <div class="card-img">
+        <img alt="Mockup de sitio web moderno" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop"/>
+      </div>
+    </div>
+  </main>
+
+  <!-- Servicios -->
+  <section id="servicios">
+    <div class="container">
+      <div class="section-head">
+        <h2>Servicios</h2>
+        <p class="muted">Todo lo que necesitas para lanzar y escalar tu presencia online.</p>
+      </div>
+      <div class="grid-3">
+        <div class="service">
+          <span class="tag">Popular</span>
+          <h3>Web Corporativa</h3>
+          <p>Hasta 6 secciones, responsive, SEO básico y optimización de velocidad.</p>
+          <div class="price">desde 399 €</div>
+          <a href="#contacto" class="cta btn">Quiero este</a>
+        </div>
+        <div class="service">
+          <span class="tag">E‑commerce</span>
+          <h3>Tienda Online</h3>
+          <p>Catálogo + pasarela de pago (Shopify/WordPress), email transaccional y formación básica.</p>
+          <div class="price">desde 690 €</div>
+          <a href="#contacto" class="cta btn">Quiero este</a>
+        </div>
+        <div class="service">
+          <span class="tag">Conversión</span>
+          <h3>Landing de Ventas</h3>
+          <p>Página de alta conversión para campañas, con copy persuasivo y analítica.</p>
+          <div class="price">desde 290 €</div>
+          <a href="#contacto" class="cta btn">Quiero este</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" style="background:linear-gradient(180deg,#ffffff, #f8fafc)">
+    <div class="container">
+      <div class="section-head">
+        <h2>Portfolio</h2>
+        <p class="muted">Algunos ejemplos (reemplaza con tus proyectos reales).</p>
+      </div>
+      <div class="portfolio">
+        <article class="work">
+          <img src="https://images.unsplash.com/photo-1529336953121-ad3af1c7d638?q=80&w=1600&auto=format&fit=crop" alt="Proyecto restaurante"/>
+          <div class="meta">
+            <div><strong>Le Tigre Café</strong> · Web Restaurante</div>
+            <a class="site" href="#" target="_blank" rel="noopener">Ver sitio</a>
+          </div>
+        </article>
+        <article class="work">
+          <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1600&auto=format&fit=crop" alt="Proyecto tienda"/>
+          <div class="meta">
+            <div><strong>Aglaya</strong> · Joyería Online</div>
+            <a class="site" href="#" target="_blank" rel="noopener">Ver sitio</a>
+          </div>
+        </article>
+        <article class="work">
+          <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1600&auto=format&fit=crop" alt="Proyecto consultoría"/>
+          <div class="meta">
+            <div><strong>EmprendeFácilAI</strong> · Landing</div>
+            <a class="site" href="#" target="_blank" rel="noopener">Ver sitio</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section id="proceso">
+    <div class="container">
+      <div class="section-head">
+        <h2>Proceso de trabajo</h2>
+        <p class="muted">Transparente, ágil y orientado a resultados.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><strong>1. Brief</strong><span class="muted">Revisamos objetivos, referencias y contenido.</span></div>
+        <div class="step"><strong>2. Diseño</strong><span class="muted">Wireframe + propuesta visual.</span></div>
+        <div class="step"><strong>3. Desarrollo</strong><span class="muted">Construcción, SEO y velocidad.</span></div>
+        <div class="step"><strong>4. Lanzamiento</strong><span class="muted">Revisión final, formación y soporte.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Precios -->
+  <section id="precios" style="background:#fafafa">
+    <div class="container">
+      <div class="section-head">
+        <h2>Planes y precios</h2>
+        <p class="muted">Elige el plan que mejor se adapte a tu proyecto.</p>
+      </div>
+      <div class="pricing">
+        <div class="plan">
+          <h3>Starter</h3>
+          <div class="amount">290 €</div>
+          <p class="muted">Landing 1 página</p>
+          <ul>
+            <li>Diseño + Copy básico</li>
+            <li>Responsive + SSL</li>
+            <li>Entrega en 5–7 días</li>
+          </ul>
+          <p></p>
+          <a href="#contacto" class="cta" style="margin-top:12px;display:inline-block">Empezar</a>
+        </div>
+        <div class="plan popular">
+          <span class="ribbon">Más elegido</span>
+          <h3>Business</h3>
+          <div class="amount">499 €</div>
+          <p class="muted">Web corporativa 4–6 secciones</p>
+          <ul>
+            <li>SEO básico + Blog</li>
+            <li>Optimización de velocidad</li>
+            <li>1 mes de soporte</li>
+          </ul>
+          <p></p>
+          <a href="#contacto" class="cta" style="margin-top:12px;display:inline-block">Empezar</a>
+        </div>
+        <div class="plan">
+          <h3>eCommerce</h3>
+          <div class="amount">desde 690 €</div>
+          <p class="muted">Shopify / WooCommerce</p>
+          <ul>
+            <li>Pasarela de pago</li>
+            <li>Catálogo + formación</li>
+            <li>Integración email</li>
+          </ul>
+          <p></p>
+          <a href="#contacto" class="cta" style="margin-top:12px;display:inline-block">Empezar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios">
+    <div class="container">
+      <div class="section-head">
+        <h2>Opiniones</h2>
+        <p class="muted">Lo que dicen quienes han trabajado conmigo.</p>
+      </div>
+      <div class="testi">
+        <div class="quote">“Proceso súper claro y resultado profesional. En una semana teníamos la web lista.” — <strong>Le Tigre Cakes</strong></div>
+        <div class="quote">“Me ayudó a convertir visitas en ventas con una landing enfocada a anuncios.” — <strong>Aglaya</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:#fafafa">
+    <div class="container">
+      <div class="section-head">
+        <h2>Preguntas frecuentes</h2>
+        <p class="muted">Si te queda alguna duda, escríbeme y te respondo hoy.</p>
+      </div>
+      <details>
+        <summary>¿En cuánto tiempo tendré mi web?</summary>
+        <p>Una landing suele estar en 5–7 días. Una web corporativa, entre 1 y 2 semanas, según contenido.</p>
+      </details>
+      <details>
+        <summary>¿Incluye SEO?</summary>
+        <p>Incluyo SEO técnico básico (estructura, metadatos, velocidad). Ofrezco planes de SEO continuo si lo necesitas.</p>
+      </details>
+      <details>
+        <summary>¿Puedo gestionarla yo después?</summary>
+        <p>Claro. Entrego acceso y una guía rápida para editar textos, imágenes y productos.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="container">
+      <div class="section-head">
+        <h2>Hablemos de tu proyecto</h2>
+        <p class="muted">Cuéntame qué necesitas y te respondo el mismo día.</p>
+      </div>
+      <form action="https://formspree.io/f/xxxxxxxx" method="POST">
+        <div class="grid-2">
+          <input name="nombre" placeholder="Tu nombre" required>
+          <input name="email" type="email" placeholder="Tu email" required>
+        </div>
+        <input name="empresa" placeholder="Empresa (opcional)">
+        <textarea name="mensaje" placeholder="Cuéntame qué necesitas…" required></textarea>
+        <div class="grid-2">
+          <button class="cta" type="submit">Enviar mensaje</button>
+          <a class="cta secondary" href="https://wa.me/34600000000?text=Hola%20Jan%2C%20quiero%20una%20web" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+        </div>
+        <p class="mini">Al enviar aceptas el tratamiento de tus datos para responder a tu solicitud. No comparto tu información con terceros.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="brand"><span class="logo">J</span><span>Jan Tafall · Web Design</span></div>
+        <p class="muted">Diseño y desarrollo de páginas web modernas, optimizadas para SEO y conversión.</p>
+      </div>
+      <div>
+        <strong>Contacto</strong>
+        <p><a href="mailto:jantafall31@gmail.com">jantafall31@gmail.com</a><br>Barcelona, España</p>
+      </div>
+      <div>
+        <strong>Links</strong>
+        <p><a href="#servicios">Servicios</a><br><a href="#portfolio">Portfolio</a><br><a href="#precios">Precios</a></p>
+      </div>
+    </div>
+    <div class="container" style="margin-top:14px">
+      <p class="mini">© <span id="year"></span> Jan Tafall — Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="wa" href="https://wa.me/34600000000?text=Hola%20Jan%2C%20quiero%20una%20web" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
