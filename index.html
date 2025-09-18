@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jan Tafall — WebExpress | Diseño web moderno y rápido</title>
+  <title>Jan Tafall — Creador de Páginas Web | Diseño web moderno y rápido</title>
   <meta name="description" content="Diseño y creación de páginas web modernas, rápidas y preparadas para vender. Tiendas online, landings y webs corporativas. Pide presupuesto sin compromiso." />
   <meta name="theme-color" content="#0ea5e9" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,7 +86,8 @@
     @media (max-width:660px){.portfolio{grid-template-columns:1fr}}
     .work{border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;background:white;box-shadow:var(--shadow)}
     .work .meta{padding:14px 16px}
-    .work .meta .site{color:#0ea5e9;font-weight:600}
+    $1
+    .work img{aspect-ratio:16/10;object-fit:cover}
     /* Proceso */
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     @media (max-width:980px){.steps{grid-template-columns:1fr 1fr}}
@@ -130,7 +131,7 @@
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Jan Tafall — WebExpress",
+    "name": "Jan Tafall — Creador de Páginas Web",
     "image": "https://via.placeholder.com/1200x630.png",
     "url": "https://tu-dominio.com",
     "areaServed": "España",
@@ -228,28 +229,33 @@
     <div class="container">
       <div class="section-head">
         <h2>Portfolio</h2>
-        <p class="muted">Algunos ejemplos (reemplaza con tus proyectos reales).</p>
+        <p class="muted">Proyectos reales.</p>
       </div>
       <div class="portfolio">
+        <!-- Proyecto: Costurnina -->
         <article class="work">
-          <img src="https://www.costurnina.es/" alt="Proyecto manualidades"/>
+          <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.costurnina.es?w=1600" alt="Costurnina — Web de costura y ganchillo"/>
           <div class="meta">
-            <div><strong>Costurnina</strong> · Web de manualidades</div>
-            <a class="site" href="#" target="_blank" rel="noopener">Ver sitio</a>
+            <div><strong>Costurnina</strong> · Web de costura y ganchillo</div>
+            <!-- TODO: Reemplaza '#' con la URL real de Costurnina -->
+            <a class="site" href="https://www.costurnina.es/" target="_blank" rel="noopener" title="Abrir sitio Costurnina">Ver sitio</a>
           </div>
         </article>
+        <!-- Proyecto: Cerrado por Derribo -->
         <article class="work">
-          <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1600&auto=format&fit=crop" alt="Proyecto tienda"/>
+          <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fbenditotito.github.io%2Ftributo-cerrado-por-derribo%2F?w=1600" alt="Cerrado por Derribo — Web oficial"/>
+          <div class="meta">
+            <div><strong>Cerrado por Derribo</strong> · Web oficial</div>
+            <!-- TODO: Reemplaza '#' con la URL real de Cerrado por Derribo -->
+            <a class="site" href="https://benditotito.github.io/tributo-cerrado-por-derribo/" target="_blank" rel="noopener" title="Abrir sitio Cerrado por Derribo">Ver sitio</a>
+          </div>
+        </article>
+        <!-- Proyecto: Aglaya -->
+        <article class="work">
+          <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fbenditotito.github.io%2FAGLAYA%2F?w=1600" alt="Aglaya — Joyería Online"/>
           <div class="meta">
             <div><strong>Aglaya</strong> · Joyería Online</div>
-            <a class="site" href="#" target="_blank" rel="noopener">Ver sitio</a>
-          </div>
-        </article>
-        <article class="work">
-          <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1600&auto=format&fit=crop" alt="Proyecto consultoría"/>
-          <div class="meta">
-            <div><strong>EmprendeFácilAI</strong> · Landing</div>
-            <a class="site" href="#" target="_blank" rel="noopener">Ver sitio</a>
+            <a class="site" href="https://benditotito.github.io/AGLAYA/" target="_blank" rel="noopener" title="Abrir sitio Aglaya">Ver sitio</a>
           </div>
         </article>
       </div>
@@ -408,3 +414,4 @@
   </script>
 </body>
 </html>
+
